@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html class = "no-js">
+
+<head>
+    <title> Duvida | Rede Social Academica </title>
+    <% include partials/head %>
+
+</head>
+
+<body>
+
+<body>
+
+    <% include partials/headerDefault %>
+    
+        <div id="page-wrapper">
+            
+            <!-- /.row -->
+            <div class="row">
+                <div class="col-lg-8">
+                    <!-- /.panel -->
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <i class="fa fa-question fa-fw"></i> 
+                        </div>
+                        <!-- /.panel-heading -->
+                        <div class="panel-body">
+                            <ul class="timeline">
+                                <li>
+                                    <div class="timeline-panel">
+                                        <div class="timeline-heading">
+                                            <h4 class="timeline-title">Qual sua Dúvida ??</h4>
+                                        </div>
+                                        <div class="timeline-body">
+                                            <button type="button" class="btn btn-default btn-lg label-info" id="myBtn">Perguntar</button>
+                                            <!-- Modal -->
+                                                  <div class="modal fade" id="myModal" role="dialog">
+                                                    <div class="modal-dialog">
+                                                    
+                                                      <!-- Modal content-->
+                                                      <div class="modal-content">
+                                                        <div class="modal-header" style="padding:35px 50px;">
+                                                          <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                                          <h4><span class="glyphicon glyphicon-lock"></span> Duvida</h4>
+                                                        </div>
+                                                        <div class="modal-body" style="padding:40px 50px;">
+                                                          <form role="form">
+                                                            <div class="form-group">
+                                                              <label for="usrname"><span class=""></span> Faça sua Perguntar</label>
+                                                              <input type="text" class="form-control" id="duvida" placeholder="Escreva sua Dúvida akih">
+                                                            </div>
+                                                          </form>
+                                                          <a class="btn btn-primary btn-block label-success" href="duvida">Perguntar</a>
+                                                        </div>
+
+                                                      </div>
+                                                    
+                                                    </div>
+                                                  </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="timeline-inverted">
+                                    <div class="timeline-badge warning"><i class="fa fa-question fa-3x"></i>
+                                    </div>
+                                    <div class="timeline-panel">
+                                        <div class="timeline-heading">
+                                            <h4 class="timeline-title">Banco de Dados</h4>
+                                        </div>
+                                        <div class="timeline-body">
+                                            <p>Pesquise os itens que foram vendidos sem desconto. As colunas presentes no
+                                                resultado da consulta são: ID_NF, ID_ITEM, COD_PROD E VALOR_UNIT.</p>
+                                        </div>
+                                        <hr class="my-0">
+                                        <div class="card-body py-2 small">
+                                            <a class="mr-3 d-inline-block" href="#">
+                                                <i class="fa fa-fw fa-thumbs-up"></i>Like</a>
+                                            <a class="mr-3 d-inline-block" href="#" id="responder">
+                                                <i class="fa fa-fw fa-comment"></i>Responder</a>
+                                            <a class="d-inline-block" href="#">
+                                                <i class="fa fa-fw fa-share"></i>Share</a>
+                                        </div>
+
+                                    </div>
+                                </li>
+                                <div class="modal fade" id="resModal" role="dialog">
+                                                    <div class="modal-dialog">
+                                                    
+                                                      <!-- Modal content-->
+                                                      <div class="modal-content">
+                                                        <div class="modal-header" style="padding:35px 50px;">
+                                                          <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                                          <h4><span class="glyphicon glyphicon-lock"></span> Duvida</h4>
+                                                        </div>
+                                                        <div class="modal-body" style="padding:40px 50px;">
+                                                          <form role="form">
+                                                            <div class="form-group">
+                                                              <label for="usrname"><span class=""></span> <p>Pesquise os itens que foram vendidos sem desconto. As colunas presentes no
+                                                resultado da consulta são: ID_NF, ID_ITEM, COD_PROD E VALOR_UNIT.</p></label>
+                                                              <input type="text" class="form-control" id="duvida" placeholder="Escreva sua Resposta">
+                                                            </div>
+                                                          </form>
+                                                          <a class="btn btn-primary btn-block label-success" href="duvida">Resṕonder</a>
+                                                        </div>
+
+                                                      </div>
+                                                    
+                                                    </div>
+                                                  </div>
+                                <li>
+                                    <div class="timeline-badge danger"><i class="fa fa-question fa-3x"></i>
+                                    </div>
+                                    <div class="timeline-panel">
+                                        <div class="timeline-heading">
+                                            <h4 class="timeline-title">Algoritmo</h4>
+                                        </div>
+                                        <div class="timeline-body">
+                                            <p>Elabore um algoritmo que mova três discos de uma Torre de Hanói, que consiste em três hastes (a-b-c), uma das quais serve de suporte para três discos de tamanhos diferentes (1-2-3), os menores sobre os maiores. Pode-se mover um disco de cada vez para qualquer haste, contanto que nunca seja colocado um disco maior sobre um menor. O objetivo é transferir os três discos para outra haste. </p>
+                                        </div>
+                                        <hr class="my-0">
+                                        <div class="card-body py-2 small">
+                                            <a class="mr-3 d-inline-block" href="#">
+                                                <i class="fa fa-fw fa-thumbs-up"></i>Like</a>
+                                            <a class="mr-3 d-inline-block" href="#">
+                                                <i class="fa fa-fw fa-comment"></i>Responder</a>
+                                            <a class="d-inline-block" href="#">
+                                                <i class="fa fa-fw fa-share"></i>Share</a>
+                                        </div>
+                                        <hr class="my-0">
+                                        <div class="card-body small bg-faded">
+                                            <div class="media">
+                                                <img class="d-flex mr-3" src="../imagem/icon_brain_round.webp" alt="">
+                                                <div class="media-body">
+                                                    <h6 class="mt-0 mb-1"><a href="#">John Smith</a></h6>Algoritmo:
+                                                          <p>início 
+                                                                 mover o disco 1 para a haste b 
+                                                                 mover o disco 2 para a haste c 
+                                                                 mover o disco 1 para a haste c 
+                                                                 mover o disco 3 para a haste b 
+                                                                 mover o disco 1 para a haste a 
+                                                                 mover o disco 2 para a haste b 
+                                                                 mover o disco 1 para a haste b 
+                                                          fim</p> 
+                                                    <ul class="list-inline mb-0">
+                                                        <li class="list-inline-item">
+                                                            <a href="#">Like</a>
+                                                        </li>
+                                                        <li class="list-inline-item">·</li>
+                                                        <li class="list-inline-item">
+                                                            <a href="#">Reply</a>
+                                                        </li>
+                                                    </ul>
+                                                <div class="media mt-3">
+                                                    <a class="d-flex pr-3" href="#">
+                                                        <img src="http://placehold.it/45x45" alt="">
+                                                    </a>
+                                                    <div class="media-body">
+                                                        <h6 class="mt-0 mb-1"><a href="#">David Miller</a></h6>Obrigado <3!
+                                                        <ul class="list-inline mb-0">
+                                                            <li class="list-inline-item">
+                                                                <a href="#">Like</a>
+                                                            </li>
+                                                        <li class="list-inline-item">·</li>
+                                                        <li class="list-inline-item">
+                                                            <a href="#">Reply</a>
+                                                      </li>
+                                                    </ul>
+                                                  </div>
+                                                </div>
+                                              </div>
+                                            </div>
+                                          </div>
+                                          <div class="card-footer small text-muted">Posted 32 mins ago</div>
+                                    </div>
+                                </li>
+                                <li class="timeline-inverted">
+                                    <div class="timeline-panel">
+                                        <div class="timeline-heading">
+                                            <h4 class="timeline-title">Lorem ipsum dolor</h4>
+                                        </div>
+                                        <div class="timeline-body">
+                                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates est quaerat asperiores sapiente, eligendi, nihil. Itaque quos, alias sapiente rerum quas odit! Aperiam officiis quidem delectus libero, omnis ut debitis!</p>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="timeline-badge info"><i class="fa fa-question fa-3x"></i>
+                                    </div>
+                                    <div class="timeline-panel">
+                                        <div class="timeline-heading">
+                                            <h4 class="timeline-title">Lorem ipsum dolor</h4>
+                                        </div>
+                                        <div class="timeline-body">
+                                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis minus modi quam ipsum alias at est molestiae excepturi delectus nesciunt, quibusdam debitis amet, beatae consequuntur impedit nulla qui! Laborum, atque.</p>
+                                            <hr>
+                                            <div class="btn-group">
+                                                <button type="button" class="btn btn-primary btn-sm dropdown-toggle" data-toggle="dropdown">
+                                                    <i class="fa fa-gear"></i> <span class="caret"></span>
+                                                </button>
+                                                <ul class="dropdown-menu" role="menu">
+                                                    <li><a href="#">Action</a>
+                                                    </li>
+                                                    <li><a href="#">Another action</a>
+                                                    </li>
+                                                    <li><a href="#">Something else here</a>
+                                                    </li>
+                                                    <li class="divider"></li>
+                                                    <li><a href="#">Separated link</a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="timeline-panel">
+                                        <div class="timeline-heading">
+                                            <h4 class="timeline-title">Lorem ipsum dolor</h4>
+                                        </div>
+                                        <div class="timeline-body">
+                                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi fuga odio quibusdam. Iure expedita, incidunt unde quis nam! Quod, quisquam. Officia quam qui adipisci quas consequuntur nostrum sequi. Consequuntur, commodi.</p>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="timeline-inverted">
+                                    <div class="timeline-badge success"><i class="fa fa-question fa-3x"></i>
+                                    </div>
+                                    <div class="timeline-panel">
+                                        <div class="timeline-heading">
+                                            <h4 class="timeline-title">Lorem ipsum dolor</h4>
+                                        </div>
+                                        <div class="timeline-body">
+                                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt obcaecati, quaerat tempore officia voluptas debitis consectetur culpa amet, accusamus dolorum fugiat, animi dicta aperiam, enim incidunt quisquam maxime neque eaque.</p>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                        <!-- /.panel-body -->
+                    </div>
+                    <!-- /.panel -->
+                </div>
+                <!-- /.col-lg-8 -->
+
+                </div>
+                <!-- /.col-lg-4 -->
+            </div>
+            <!-- /.row -->
+                <div class="col-lg-4">
+                    <% include partials/chat %>
+                </div>
+        </div>
+        <!-- /#page-wrapper -->
+
+    </div>
+    <!-- /#wrapper -->
+
+    <!-- jQuery -->
+    <script src="./vendor/jquery/jquery.min.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="./vendor/bootstrap/js/bootstrap.min.js"></script>
+
+    <!-- Metis Menu Plugin JavaScript -->
+    <script src="./vendor/metisMenu/metisMenu.min.js"></script>
+
+    <!-- Morris Charts JavaScript -->
+    <script src="./vendor/raphael/raphael.min.js"></script>
+    <script src="./vendor/morrisjs/morris.min.js"></script>
+    <script src="./data/morris-data.js"></script>
+
+    <!-- Custom Theme JavaScript -->
+    <script src="./js/sb-admin-2.js"></script>
+
+
+    <script>
+        $(document).ready(function(){
+            $("#myBtn").click(function(){
+                $("#myModal").modal();
+            });
+        });
+        $(document).ready(function(){
+            $("#responder").click(function(){
+                $("#resModal").modal();
+            });
+        });
+        $(document).ready(function(){
+            $("#chat").click(function(){
+                $("#chatModal").modal();
+            });
+        });
+    </script>
+
+</body>
+
+</html>

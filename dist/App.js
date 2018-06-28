@@ -4,7 +4,9 @@ const path = require("path");
 const express = require("express");
 const bodyParser = require("body-parser");
 const session = require("express-session");
+const data_1 = require("./database/data");
 const UserRouter_1 = require("./routes/UserRouter");
+global.db = data_1.connection;
 // Criando as configurações para o ExpressJS
 const App = express();
 App.set("views", path.join(__dirname, "../views"));

@@ -1,10 +1,12 @@
 import * as path from 'path';
 import * as express from 'express';
-import * as logger from 'morgan';
 import * as bodyParser from 'body-parser';
 import * as session from 'express-session';
 
-import personRouter from "./routes/UserRouter";
+
+import {connection} from './database/data';
+import userRouter from "./routes/UserRouter";
+global.db = connection;
 // Criando as configurações para o ExpressJS
 
 const App = express();
@@ -21,6 +23,6 @@ App.use(session({
 App.use(
     express.static(path.join(__dirname, "../public"))
 );
-App.use('/', personRouter.router);
+App.use('/',userRouter.router);
 
 export default App;

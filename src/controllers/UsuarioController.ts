@@ -9,5 +9,5 @@ export class UsuarioController{
         this._inputNome = nome;
         this._inputSenha = senha;
     }
-    
+        
 }
