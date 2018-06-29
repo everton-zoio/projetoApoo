@@ -6,6 +6,7 @@ import * as session from 'express-session';
 
 import {connection} from './database/data';
 import userRouter from "./routes/UserRouter";
+import chatRouter from "./routes/ChatRouter";
 global.db = connection;
 // Criando as configurações para o ExpressJS
 
@@ -24,5 +25,6 @@ App.use(
     express.static(path.join(__dirname, "../public"))
 );
 App.use('/',userRouter.router);
+App.use('/ChatG/', chatRouter.router);
 
 export default App;

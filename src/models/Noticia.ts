@@ -1,3 +1,10 @@
+
 export class Noticia {
-    private _id
+
+    private conteudo: string;
+    private comentario: Array<string>;
+
+    constructor(){
+        
+    }
 }

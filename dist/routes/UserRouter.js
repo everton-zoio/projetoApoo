@@ -8,15 +8,18 @@ class UserRouter {
         this.init();
     }
     getIndex(req, res, next) {
-        if (req.session.usuario) {
+        if (req.session.usuario == null) {
+            res.redirect("/login");
+            return;
+        }
+        var sql = "SELECT * FROM `chat Global` C, Usuario U WHERE U.RA = C.UsuarioId ORDER BY data DESC;";
+        db.query(sql, (err, rows) => {
             res.render("index", {
                 usuario: req.session.nome,
-                chatG: []
+                login: req.session.usuario,
+                chatG: rows
             });
-        }
-        else {
-            res.redirect('/login');
-        }
+        });
     }
     getLogin(req, res, next) {
         if (req.session.usuario) {
@@ -29,9 +32,9 @@ class UserRouter {
         }
     }
     postLogin(req, res, next) {
-        var body = req.body;
-        var sql = "SELECT * FROM Usuario WHERE RA=? AND PASSWORD=?";
-        db.query(sql, [body.ra, body.password], function (err, result) {
+        let body = req.body;
+        let sql = "SELECT * FROM Usuario WHERE RA=? AND PASSWORD=?";
+        db.query(sql, [body.ra, body.password], (err, result) => {
             if (err) {
                 console.log(err);
                 return;
@@ -45,11 +48,47 @@ class UserRouter {
             res.render("login", { erro: "Usuário não encontrado" });
         });
     }
+    getCadastro(req, res, next) {
+        res.render('cadastro', {
+            erro: null
+        });
+    }
+    postCadastro(req, res, next) {
+        let body = req.body;
+        let sql = "INSERT INTO Usuario VALUES (' + body.ra + ', ' + body.password + ', ' + body.nome + ')";
+        db.query(sql, (err, result) => {
+            if (err) {
+                console.log(err);
+                res.render('cadastro', {
+                    erro: true
+                });
+                return;
+            }
+            req.session.usuario = body.ra;
+            req.session.nome = body.nome;
+            res.redirect('/');
+        });
+    }
+    getLogout(req, res, next) {
+        if (req.session.usuario) {
+            req.session.destroy((err) => {
+                if (err)
+                    console.log(err);
+            });
+            res.redirect('/login');
+            return;
+        }
+        res.redirect('/login');
+        return;
+    }
     init() {
         this.router.get('/', this.getIndex);
         this.router.get('/index', this.getIndex);
         this.router.get('/login', this.getLogin);
         this.router.post('/login', this.postLogin);
+        this.router.get('/Cadastro', this.getCadastro);
+        this.router.post('/Cadastro', this.postCadastro);
+        this.router.get('/sair', this.getLogout);
     }
 }
 exports.UserRouter = UserRouter;
