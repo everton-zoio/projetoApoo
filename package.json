@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "nodemon dist/index",
-    "dev": "concurrently \"tsc\" \"nodemon dist/index\""
+    "d": "concurrently \"tsc\" \"nodemon dist/index\""
   },
   "author": "Everton J. Abreu",
   "license": "ISC",
